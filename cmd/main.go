@@ -21,6 +21,7 @@ func main() {
 	response, err := client.GetUrlWithFastestResponse(urls, time.Second*1)
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 
 	json.NewEncoder(os.Stdout).Encode(response)
